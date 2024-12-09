@@ -1,0 +1,64 @@
+Purpose:
+To check the similarity between two text inputs or text files, calculating a percentage similarity using Jaccard's algorithm.
+
+```````````````````````````````````````````````
+Core Features:
+
+Mode Selection:
+Users can choose between Text Input or File Upload modes.
+Radio buttons (textOption and fileOption) toggle between the modes.
+
+Text Input Mode:
+Users manually input text into two text areas (inputArea1 and inputArea2).
+
+File Upload Mode:
+Users upload two text files via buttons (uploadButton1 and uploadButton2).
+The filenames are displayed upon successful upload.
+
+Similarity Calculation:
+Calculates similarity as a percentage using the Jaccard formula:
+Intersection Size / Union Size of word sets.
+Supports both text and file input.
+
+UI Navigation:
+Welcome Screen with options to:
+Start plagiarism detection.
+View the "About Us" and "Guide" sections.
+Exit the application.
+Main UI: Allows input or file selection and shows similarity results.
+
+Result Display:
+The similarity percentage is displayed in a styled label (resultLabel).
+
+
+```````````````````````````````````````````````
+Key Components:
+
+UI Elements:
+JTextArea: For text input.
+JRadioButton: To select input mode.
+JButton: For uploading files, starting similarity check, and navigation.
+JLabel: For result display and status updates.
+
+Helper Functions:
+createSquareButton: Customizes button styles.
+createTextArea: Prepares text areas with placeholders and styling.
+chooseFile: Allows file selection via JFileChooser.
+setTextInputEnabled & setFileInputEnabled: Toggles UI components based on input mode.
+
+Plagiarism Logic:
+calculateTextSimilarity: Computes the similarity percentage for either text or files.
+getWordsFromText: Extracts unique words from a text string.
+getWordsFromFile: Reads a file and extracts unique words.
+getIntersectionSize & getUnionSize: Calculate word set intersection and union sizes.
+
+
+Additional Features:
+"About Us" Section:
+Lists project developers' names.
+
+Guide Section:
+Explains usage steps for both input modes.
+
+Styling Enhancements:
+Light colors, gradients, and styled components ensure a user-friendly interface.
